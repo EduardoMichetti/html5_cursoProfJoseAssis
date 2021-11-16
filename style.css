@@ -1,0 +1,29 @@
+/* 
+O css pode estar em uma folha html ou separada como neste caso em um arquivo .css
+Para aplicar ele direto no html basta usar as tags <style> </style> 
+Vantagem de estar separado é ter a sua reutilização e tbem na sua organização e desempenho, 
+pois os arquivos ficam mais limpos e menores
+*/
+
+/*
+Para usar ele no HTML basta usar dentro do HEAD o comando:
+link:css
+vai gerar este código: 
+<link rel="stylesheet" href="style.css">
+*/
+
+/*
+Sintaxe de um código CSS
+seletor{propriedade que quer modificar: e o valor desta propriedade;}
+Seletor pode ser qualquer <tag> ou um #id ou uma classe .Class
+
+tbém é possível modificar várias propriedades ao mesmo tempo
+seletor{
+    propriedade1: valor;
+    propriedade2: valor;
+}
+*/
+
+body{
+    background-color: #ff0000;
+}
