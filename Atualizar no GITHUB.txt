@@ -1,0 +1,23 @@
+git status 
+//Verifica se tem alguma alteração
+
+git add .
+//adiciona a alteração
+
+git status
+//verifica se esta tudo ok
+
+git commit -m "Descreva as alterações"
+//identificar quais foram as alterações
+
+git status
+//verifica se esta tudo ok
+
+git push
+//Atualizar alterações para a plataforma gitHUB
+
+
+Observação, se for feita alguma alteração direto no gitHUB
+no terminal do git faça um 
+git pull
+para sincronizar as alterações
