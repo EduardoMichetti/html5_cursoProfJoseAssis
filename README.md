@@ -21,6 +21,7 @@ Curso Youtube Prof José de Assis Html5 e CSS3
 [optmozilla](https://imagecompressor.com/pt)
 
 ###Validação W3C
+
 [html](validator.w3.org)
 
 [css](http://jigsaw.w3.org/css-validator/)
