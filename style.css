@@ -50,10 +50,11 @@ seletor{
         background-color: #ff6600;
 
     }
+}
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px){ /*Se for maior que 1200pixel fazer isso*/
     body{
         background-color: #ff0000;
 
     }
-/**/
+}
