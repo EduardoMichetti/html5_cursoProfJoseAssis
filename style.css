@@ -25,21 +25,13 @@ seletor{
 }
 */
 
-
-/* CSS RESET 
-isso é feito para  padronizar o layout em todo navegador, no contrário,
-cada navegador exibe de um jeito.*/
-*{
- margin: 0;
- border: 0;   
- padding: 0;
-}
-
 /* IMPORTAÇÃO GOOGLE FONTS 
 para fazer a importação, acesse o site: https://fonts.google.com/
 selecione uma fonte, escolha os estilos desejados, aqui no exemplo
 selecionamos REGULAR 400 e BOLD 700, na aba ao lado selecione @import
 e copie o que dentro da tag STYLE e cole ele após o CSS RESET
+OBSERVAÇÃO: toda importação deve ser a primeira coisa a fazer dento da folha
+de estio CSS
 */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 /*também é necessário pegar a regra em CSS RULES copiar e colar dentro do elemento body*/
@@ -47,6 +39,15 @@ body{/*Tudo que tiver dentro de BODY vai seguir esta regra*/
     font-family: 'Open Sans', sans-serif; /*regra copiada*/
     font-size: 1em; /*agora definimos o tamanho da fonte, equivale a 16pixel*/    
 }
+
+/* CSS RESET 
+isso é feito para  padronizar o layout em todo navegador, no contrário,
+cada navegador exibe de um jeito.*/
+*{
+    margin: 0;
+    border: 0;   
+    padding: 0;
+   }
 
 /* CSS FLEXBOX 
 para um layout responsivo e flexivel. A Flexbox, organiza os elemtos, ou seja, as tag html 
@@ -62,9 +63,13 @@ desta forma ele cria a classe automáticamente.
 /*LAYOUT*/
 .Container {
     margin:0 auto; /*Centralizar conteúdo na tela*/
-    background-color: #77ff00; /*Definimos uma cor de fundo para ficar mais fácil visualizar este estilo de layout*/
+    background-color: #dcdcdc; /*Definimos uma cor de fundo para ficar mais fácil visualizar este estilo de layout*/
 }
-
+#topo { /* Desta forma vamos ficar uma posição única para o ícone TOPO */
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
 
 /* Agora vamos criar breakpoints para cada tipo de tela */
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/

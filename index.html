@@ -19,54 +19,87 @@
     <title> </title> que fica em HEAD
  -->
 
-<!DOCTYPE html> <!--Colocando Exclamação o VS Code cria os metas tag automaticamente -->
-<html lang="pt-br">  <!-- precisa estar pt-br para reconhecer todos caracteres da nossa lingua -->
+<!DOCTYPE html>
+<!--Colocando Exclamação o VS Code cria os metas tag automaticamente -->
+<html lang="pt-br">
+<!-- precisa estar pt-br para reconhecer todos caracteres da nossa lingua -->
+
 <head>
-    <meta charset="UTF-8">  <!-- também esta relacionada ao idioma, o padrão 8 é o mais usado na Web -->
+    <meta charset="UTF-8"> <!-- também esta relacionada ao idioma, o padrão 8 é o mais usado na Web -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- compatibiliza versoes antigas do IE com o HTML5-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- exibir da melhor forma possível idenpente da tela ou dispositivo que esta acessando  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- exibir da melhor forma possível idenpente da tela ou dispositivo que esta acessando  -->
     <!-- SEO um bom título e uma boa descrição ajudam nas pesquisas google-->
-    <title>Curso HTML5 e CSS3 - Prof José de Assis</title> <!-- Título do site que é exibido na pesquisa Google, coloque no máximo 55 caracteres -->
-    <meta name="descrição" content="Site desenvolvido para estudos do curso de HTML5 e CSS3 do Prof José de Assis"> <!--Descrição que aparece na pesquisa Google, 
+    <title>Curso HTML5 e CSS3 - Prof José de Assis</title>
+    <!-- Título do site que é exibido na pesquisa Google, coloque no máximo 55 caracteres -->
+    <meta name="descrição" content="Site desenvolvido para estudos do curso de HTML5 e CSS3 do Prof José de Assis">
+    <!--Descrição que aparece na pesquisa Google, 
         recomenda no máximo 155 caracteres contando os espaços-->
-    <link rel="icon" href="img/favicon.png"> <!--Icone exibido no site e tbem nos favoritos, também conhecido como favicon, não precisa ser .ico-->      
+    <link rel="icon" href="img/favicon.png">
+    <!--Icone exibido no site e tbem nos favoritos, também conhecido como favicon, não precisa ser .ico-->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- CTRL + K depois CTRL + C gera o comentário -->
     <!-- CABEÇALHO -->
-    <header>
+    <header id="inicio"> <!--id="inicio" para identificar um link para header-->
         <div class="Container">
-
+            <!-- LOGO vai ficar dentro de um container 
+            atalho para Container div#Logo-->
+            <div id="Logo">
+                <img src="img/logo.png" alt="hal 9000">
+                <!-- caminho da logo, depois 
+                    ALT é usado para acessibilidade e também otimização 
+                    ao clicar na imagem em uma pesquisa goole ele leva para o nosso site, 
+                    o site que a imagem esta hospedado, coloque dentro de alt o nome que deseja ser exibido-->
+            </div>
+            <nav>
+                <!-- Neste breakpoint vamos usar um menu hamburguer -->
+                <input type="checkbox" id="check">
+                <!-- <label for="check">escrever o que deseja ser exibido</label> -->
+                <!-- para o menu hamburguer vamos usar um código UNICODE, pode ser visualizado no site: unicode.org/charts/ 
+                para usar um unicode use o '&' depois '#' depois 'x' e escreva o código unicode, conforme exemplo abaixo, com ';' no final-->
+                <label for="check">&#x268c;</label>
+                <!-- Agora vamos criar uma lista ao apertar o menu será exibida. 
+                ul>li*4>a ('ul' cria uma lista, 'li*4' de quatro itens, 'a' cada lista tem um link) 
+                após digitar tudo, para alinhar, aperte: SHIFT + ALT + F -->
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#conteudo">Conteúdo</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <!-- DESTAQUE -->
     <main>
         <div class="Container">
             <h1>HTML5 e CSS3</h1>
-            <h2>Você faz. Você vê. Você aprende.</h2> 
+            <h2>Você faz. Você vê. Você aprende.</h2>
         </div>
     </main>
     <!-- SOBRE -->
-    <section>
+    <section id="sobre"> <!--id="sobre" para identificar um link para Sobre-->
         <div class="Container">
-            <h1>Aprender na prática</h1> 
-        </div>    
+            <h1>Aprender na prática</h1>
+        </div>
     </section>
     <!-- ONE PAGE -->
     <section>
         <div class="Container">
             <h2>One page Site</h2>
-        </div>        
+        </div>
     </section>
     <!-- WIREFRAME -->
     <section>
         <div class="Container">
             <h2>Wireframe</h2>
-        </div>        
+        </div>
     </section>
     <!-- CONTEUDO -->
-    <section>
+    <section id="conteudo"> <!--id="conteudo" para identificar um link para Conteudo-->
         <div class="Container">
             <h2>Conteúdo</h2>
             <h3>HTML5</h3>
@@ -75,10 +108,15 @@
         </div>
     </section>
     <!-- RODAPÉ -->
-    <footer>
+    <footer id="contato"> <!--id="contado" para identificar um link para Contato-->
         <div class="Container">
-            
         </div>
     </footer>
+    <!-- ÍCONE para voltar ao TOPO, antes de fechar o BODY criamos uma forma do usuário sempre 
+    que desejar conseguir voltar ao topo do site -->
+    <a href="#inicio" id="topo"><img src="img/topo.png" alt="topo do site"></a>
+    <!-- este id TOPO é para ser usado no CSS -->
+
 </body>
+
 </html>
