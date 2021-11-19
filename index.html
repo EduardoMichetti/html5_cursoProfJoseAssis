@@ -19,6 +19,15 @@
     <title> </title> que fica em HEAD
  -->
 
+ <!-- LIVE SERVER 
+extensão para o VS CODE que assim que modificado ele atualiza o navegador automaticamente
+CTRL + SHIFT + X -> abre a busca de novas extensões, digite LIVE SERVER e instale
+CTRL + SHIFT + P -> digite live e escolha (stop live server)
+CTRL + SHIFT + P -> OPEN WITH LIVE SERVER
+isto mais o AUTO SAVE do VS CODE otimizam muito o tempo de desenvolvimento do site
+-->
+ 
+
 <!DOCTYPE html>
 <!--Colocando Exclamação o VS Code cria os metas tag automaticamente -->
 <html lang="pt-br">
@@ -44,10 +53,10 @@
     <!-- CTRL + K depois CTRL + C gera o comentário -->
     <!-- CABEÇALHO -->
     <header id="inicio"> <!--id="inicio" para identificar um link para header-->
-        <div class="Container">
+        <div class="Container Flex"> <!--esta executando duas classes ao mesmo tempo, dentro da tag posso ter várias classes-->
             <!-- LOGO vai ficar dentro de um container 
             atalho para Container div#Logo-->
-            <div id="Logo">
+            <div id="logo">
                 <img src="img/logo.png" alt="hal 9000">
                 <!-- caminho da logo, depois 
                     ALT é usado para acessibilidade e também otimização 

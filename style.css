@@ -63,8 +63,22 @@ desta forma ele cria a classe automáticamente.
 /*LAYOUT*/
 .Container {
     margin:0 auto; /*Centralizar conteúdo na tela*/
+    /*(USADO PARA FIM DIDATICO APENAS, REMOVIDO NO FINAL DO CURSO
     background-color: #dcdcdc; /*Definimos uma cor de fundo para ficar mais fácil visualizar este estilo de layout*/
 }
+
+.Flex {
+    display: flex; /*Utilizando a propriedade flex*/    
+    /*justify-content
+    space-between -> um em cada canto
+    center
+    flex-start
+    flex-end*/
+    justify-content: space-between;
+    /*(USADO PARA FIM DIDATICO APENAS, REMOVIDO NO FINAL DO CURSO
+    background-color: #a9a9a9;*/
+}
+
 #topo { /* Desta forma vamos ficar uma posição única para o ícone TOPO */
     position: fixed;
     right: 10px;
@@ -74,11 +88,60 @@ desta forma ele cria a classe automáticamente.
 /* Agora vamos criar breakpoints para cada tipo de tela */
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+/*aqui vai servir para todos celular e para pc faço diferente*/
+header { /*indico a altura do header do body no html*/    
+    height: 60px;
+}
+
+#logo img {
+    width: 128px;
+    height: 128px;
+}
+
+#check {
+    display: none;
+}
+label{
+    font-size: 3em;
+    padding-right: 15px; /*espaçamento de 15px a direita*/
+}
+nav ul{ /*ul que esta subordinado nav, que é uma tag semântica para identificação do menu*/
+    list-style: none; /* Remove os bullets (ponto, marcação antes de cada item do menu */
+    background-color: #343538;
+    height: 100vh; /*define a altura do menu*/
+    position: fixed; /* define um posicionamento fixo para lista */
+    top: 60px; /* sobe a lista que estava com um espaço vazio entre o menu hamburguer e a lista*/
+    
+    right: -100%; /*escondo o meu para quando tiver o evento do click no chech ele aparecer*/
+    /*poderia fazer outras coisas
+    width: 100%; exibe o menu na tela inteira*/
+    transition: all 0.5s; /*efeito de transição, demora 5 segundos para aparecer*/
+}
+
+#check:checked ~ ul{
+/*Evento para exibir o menu ao click
+no pc vai ser diferente*/   
+right: 0; 
+}
+
+
+
+nav ul li{/*criar um estilo para "li" dentro de "ul" que esta subordinado a "nav" */
+    padding: 20px; /*espaçamento interno aos itens da lista*/
+    border-bottom: 1px solid #a9a9a9; /* borda inferior do tamanho de 1px */    
+}
+nav ul li a{
+/*mudar a forma que o padrão do navegador identifica links
+remover o sublinhado e mudar a cor do texto*/
+    text-decoration: none; /* remover sublinhado */
+    color: #fff; /*mudar da cor azul (padrao) para cor branco */
+
+}
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 576px){ /*Se for maior que 576pixel fazer isso*/
     body{
-        background-color: #0ff;
+        /*background-color: #0ff; cores usadas apenas para testes quando criamos os breakpoints para layout*/
     }
     /*LAYOUT */
     .Container{ /* Define a largura máxima conforme pontos de quebras 'BREAKPOINTS' */
@@ -88,7 +151,7 @@ desta forma ele cria a classe automáticamente.
 /* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 768px){ /*Se for maior que 576pixel fazer isso*/
     body{
-        background-color: #ff0;
+        /*background-color: #ff0; cores usadas apenas para testes quando criamos os breakpoints para layout*/
     }
     /*LAYOUT */
     .Container{ /* Define a largura máxima conforme pontos de quebras 'BREAKPOINTS' */
@@ -98,7 +161,7 @@ desta forma ele cria a classe automáticamente.
 /* Tablet Landscape e monitores mais antigos>>>>>>>>>>> */
 @media (min-width: 992px){ /*Se for maior que 992pixel fazer isso*/
     body{
-        background-color: #ff6600;
+        /*background-color: #ff6600; cores usadas apenas para testes quando criamos os breakpoints para layout*/
     }
     /*LAYOUT */
     .Container{ /* Define a largura máxima conforme pontos de quebras 'BREAKPOINTS' */
@@ -108,10 +171,44 @@ desta forma ele cria a classe automáticamente.
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 @media (min-width: 1200px){ /*Se for maior que 1200pixel fazer isso*/
     body{
-        background-color: #ff0000;
+        /*background-color: #ff0000; cores usadas apenas para testes quando criamos os breakpoints para layout*/
     }
     /*LAYOUT */
     .Container{ /* Define a largura máxima conforme pontos de quebras 'BREAKPOINTS' */
         max-width: 1140px;
     }
+
+    /* CABEÇALHO */
+    inicio {
+        height: 120px;        
+    }
+    #logo img {
+        width: 189px;
+        height: 189px;
+        margin-top: 30px;
+    }
+
+    label{/*nao exibir o menu hamburguer*/
+        display: none;
+    }
+    nav ul{/*MENU DIFERENTE PARA PC*/
+        position: static; /*vai ignorar os parametros top e right definidos anteriormente e sempre exibir*/
+        height: auto; /*deixa a altura automatica*/
+        background-color: transparent; /*deixa TRANSPARENTE sem nenhuma cor definida*/      
+        margin-top: 50px;  /*lista será exibida abaixo de 50px*/
+    }
+    nav ul li{
+        float: left; /*faz os elementos flutuar para esquerda, deixa na HORIZONTAL os itens da lista*/
+        border: 0; /* retira a borda */        
+    }
+    nav ul li a{
+        /*cor dos itens do menu*/
+        color: #343538
+    }
+    nav ul li a:hover
+    {
+        /*muda a cor quando passa o cursor no link*/
+        color: #c00000;
+    }
+
 }
